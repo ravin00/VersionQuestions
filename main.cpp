@@ -1,40 +1,25 @@
 #include <iostream>
-#include "Lab.h"
-#include "Lab.cpp"
+#include "Book.h"
+#include "Book.cpp"
 
 using namespace std;
 
 int main (){
 
-    Lab l1,l2,l3;
+    Book b1,b2,b3;
 
-    l1.setLabDetails(401,60);
-    l2.setLabDetails(402,40);
-    l3.setLabDetails(403,30);
+b1.setBookDetails(1111,"Jane Eyer","Charlotte bronte");
+b2.setBookDetails(1212,"Divergent","Veronica Roth");
+b3.setBookDetails(1313,"Matilda","Roald Dahl");
 
-    int capacity;
+    b1.setBookID(1);
+    b2.setBookID(2);
+    b3.setBookID(3);
 
-    cout << "Enter Capacity  : ";
-    cin >> capacity;
-
-    if (capacity <= l3.getCapacity()){
-        cout << "Lab 403"<< endl;
-    }
-
-    else if (capacity <= l2.getCapacity()){
-        cout << "Lab 402"<<endl;
-    }
-
-    else if (capacity <= l1.getCapacity()){
-
-        cout << "Lab 401" <<endl;
-    }
-
-    else {
-
-        cout << "Inavlid Input" << endl;
-    }
-
+    b1.displayBookDetails();
+    b2.displayBookDetails();
+    b3.displayBookDetails();
+    
 
     return 0;
 }
